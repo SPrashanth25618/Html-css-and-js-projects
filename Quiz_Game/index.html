@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <div class="container">
+    <div class="screen active" id="start-screen">
+      <h1>Quiz Time!</h1>
+      <p>Test your knowledge with this fun questions</p>
+      <button class="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- screen2 -->
+    <div class="questions-screen" id="questions-screen">
+      <h2 id="question" class="question">Here comes the question</h2>
+      <p>Question <span id="start-q">0</span> out of <span id="end-q">5</span></p>
+      <p>Score : <span id="score">0</span></p>
+      <div class="options" id="options">
+
+      </div>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+
+    <!-- screen3 -->
+    <div class="result-screen">
+      <h1>Quiz Results</h1>
+      <div id="report-display">
+        <p>You scored <span id="score-achieved">0</span> out of <span id="total-score">5</span></p>
+      </div>
+      <button class="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
 </body>
+
 </html>
