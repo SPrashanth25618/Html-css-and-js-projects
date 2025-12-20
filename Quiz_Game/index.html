@@ -17,12 +17,15 @@
     </div>
 
     <!-- screen2 -->
-    <div class="questions-screen" id="questions-screen">
-      <h2 id="question" class="question">Here comes the question</h2>
-      <p>Question <span id="start-q">0</span> out of <span id="end-q">5</span></p>
-      <p>Score : <span id="score">0</span></p>
+    <div class="screen" id="questions-screen">
+      <div class="question-header">
+        <h2 id="question" class="question">Here comes the question</h2>
+        <div class="quiz-info">
+          <p>Question <span id="start-q">0</span> out of <span id="end-q">5</span></p>
+          <p>Score : <span id="score">0</span></p>
+        </div>
+      </div>
       <div class="options" id="options">
-
       </div>
       <div class="progress-bar">
         <div id="progress"></div>
@@ -30,10 +33,11 @@
     </div>
 
     <!-- screen3 -->
-    <div class="result-screen">
+    <div class="screen" id="result-screen">
       <h1>Quiz Results</h1>
       <div id="report-display">
         <p>You scored <span id="score-achieved">0</span> out of <span id="total-score">5</span></p>
+        <div id="res-message">Good Job</div>
       </div>
       <button class="restart-btn">Restart Quiz</button>
     </div>
