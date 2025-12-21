@@ -1,5 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body{
+  background: linear-gradient(135deg,#83ec5a,#c3cfe2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container{
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h1::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 70%;
+  background-color: #83ec5a;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+#generate-btn{
+  background: linear-gradient(135deg,#83ec5a,#c3cfe2);
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 1.5rem;  
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+#generate-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(75, 239, 111, 0.3);
+}
+
+#generate-btn:active{
+  transform: translateY(0);
+}
+
+.palette-container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.color-box{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 2s;
+}
+
+.color-box:hover{
+  transform: translateY(-5px);
+}
+
+.color{
+  height: 120px;
+  cursor: pointer;  
+}
+
+.color-info{
+  padding: 0.7rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.hex-value{
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.copy-btn{
+  cursor: pointer;
+  color: #64748b;
+  transform: color 0.2s;
+}
+
+.copy-btn:hover{
+  color: #69ca43;
 }
