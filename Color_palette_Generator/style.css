@@ -113,3 +113,9 @@ h1::after{
 .copy-btn:hover{
   color: #69ca43;
 }
+
+@media (max-width: 768px){
+  .palette-container{
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  }
+}
