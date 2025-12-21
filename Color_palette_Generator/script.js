@@ -51,3 +51,13 @@ function updateUI(colors){
   });
 }
 
+function generateColor(){
+  const value = "0123456789ABCDEF";
+  let color = "#";
+  for(let i=0;i<6;i++){
+    color += value[Math.floor(Math.random()*16)];
+  }
+  return color;
+}
+
+generatePalette();
