@@ -1,0 +1,53 @@
+const generateBtn = document.getElementById('generate-btn');
+const paletteContainer = document.querySelector('.palette-container');
+
+generateBtn.addEventListener('click',generatePalette);
+
+paletteContainer.addEventListener('click',(e) => {
+  if(e.target.classList.contains("copy-btn")){
+    const hexValue = e.target.previousElementSibling.textContent;
+    navigator.clipboard.writeText(hexValue).then(() => {
+      showCopySucess(e.target);
+    }).catch((er) => {
+      console.log(er);
+    })
+  }else if(e.target.classList.contains("color")){
+    const hexValue = e.target.nextElementSibling.querySelector(".hex-value").textContent;
+    navigator.clipboard.writeText(hexValue).then(() => {
+      showCopySucess(e.target.nextElementSibling.querySelector(".copy-btn"));
+    }).catch((er) => {
+      console.log(er);
+    })
+  }
+})
+
+function showCopySucess(element){
+  element.classList.remove("far","fa-copy");
+  element.classList.add("fas","fa-check");
+
+  element.style.color = "#48bb78";
+  setTimeout(() => {
+    element.classList.remove("fas","fa-check");
+    element.classList.add("far","fa-copy");
+    element.style.color = "";
+  },1500);
+}
+
+function generatePalette(){
+  const colors = [];
+  for(let i=0;i<6;i++){
+    colors.push(generateColor());
+  }
+  updateUI(colors);
+}
+
+function updateUI(colors){
+  const colorBoxes = document.querySelectorAll('.color-box');
+  colorBoxes.forEach((box,index) => {
+    const colorDiv = box.querySelector('.color');
+    const hexValue = box.querySelector('.hex-value');
+    colorDiv.style.backgroundColor = colors[index] ;
+    hexValue.textContent = colors[index];
+  });
+}
+
