@@ -6,7 +6,7 @@
 
 body{
   font-family: sans-serif;
-  background-color: #bad0f1;
+  background-color: #cdd3db;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +68,7 @@ h1{
 }
 
 .list.over{
-  background-color: #3f4041;
+  background-color: #85898d;
 }
 
 @media (max-width: 760px){
