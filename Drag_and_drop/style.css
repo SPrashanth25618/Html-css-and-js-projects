@@ -3,3 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-family: sans-serif;
+  background-color: #bad0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container{
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem;
+}
