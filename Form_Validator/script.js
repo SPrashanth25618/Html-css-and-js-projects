@@ -77,7 +77,7 @@ function checkRequired(arr) {
       showSuccess(input);
     }
   });
-  return true;
+  return isvalid;
 }
 
 function formatFieldName(input){
