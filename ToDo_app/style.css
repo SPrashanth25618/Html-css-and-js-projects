@@ -146,6 +146,14 @@ header p{
   position: absolute;
 }
 
+.todo-item-container{  
+  padding: 3px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .checkmark{
   display: inline-block;
   width: 20px;
@@ -181,7 +189,7 @@ header p{
 }
 
 .todo-item.completed .todo-item-text{
-  text-decoration: line-through;
+  text-decoration: line-through !important;
   color: var(--gray);
 }
 
